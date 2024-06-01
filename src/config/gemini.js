@@ -55,6 +55,7 @@ import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/ge
  
    const response = result.response.text();
     console.log(response);
+    return response;
     
   }
   

@@ -16,7 +16,15 @@ const [loading, setLoading] = useState(false);
 const [resultData, setResultData] = useState("");
 
     const onSent = async (prompt) => {
-        await run(prompt);
+
+        setResultData("");
+        setLoading(true);
+        setShowResult(true);
+        setRecentPrompt(input);
+       const response =  await run(input);
+         setResultData(response);
+         setLoading(false);
+         setInput("");
     }
    
     const contextValue={
